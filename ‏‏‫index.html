@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דניאל כהן | קורות חיים</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* --- פלטת צבעי שחור-אפור (Black & Gray) --- */
+            --bg-body: #f8f9fa; /* אפור בהיר מאוד לרקע */
+            --text-dark: #111111; /* שחור כמעט מלא לטקסט */
+            --text-muted: #555555; /* אפור בינוני לטקסט משני */
+            
+            /* צבעי דגש מונוכרומטיים */
+            --col-hero-grad: linear-gradient(135deg, #000000 0%, #434343 100%); /* גרדיאנט שחור-אפור */
+            --col-accent-main: #333333; /* אפור כהה מאוד (Charcoal) */
+            --col-accent-light: #e9ecef; /* אפור בהיר למסגרות ורקעים עדינים */
+            --col-btn-text: #ffffff;
+        }
+
+        body {
+            font-family: 'Heebo', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding-bottom: 4rem;
+        }
+
+        /* --- HERO SECTION --- */
+        header {
+            background: var(--col-hero-grad);
+            color: white;
+            padding: 4rem 2rem 6rem 2rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+            font-weight: 400;
+            color: #d1d1d1;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 1.1rem;
+            color: #f0f0f0;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-btn {
+            background: white;
+            color: black;
+            padding: 0.5rem 1.8rem;
+            border-radius: 4px; /* פינות חדות יותר למראה רשמי */
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 1.2rem;
+            display: inline-block;
+            transition: all 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .contact-btn:hover {
+            background: #e2e2e2;
+            transform: translateY(-2px);
+        }
+
+        /* --- MAIN CONTAINER --- */
+        .container {
+            max-width: 800px;
+            margin: -3rem auto 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        section { margin-bottom: 2.5rem; }
+
+        h2 {
+            color: var(--text-dark);
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            border-right: 5px solid var(--text-dark); /* פס שחור עבה */
+            padding-right: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- CARDS --- */
+        .card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 8px; /* רדיוס קטן יותר למראה עסקי */
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            margin-bottom: 1.2rem;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-color: #bbbbbb;
+        }
+
+        /* היררכיה ויזואלית */
+        .card h3 { margin: 0; font-size: 1.3rem; color: #000; font-weight: 700; }
+        .card-sub { color: #444; font-weight: 600; font-size: 1rem; margin-top: 2px; display: block;}
+        .card-date { color: #777; font-size: 0.9rem; margin-bottom: 0.8rem; display: block; font-style: italic;}
+        
+        ul { padding-right: 1.2rem; margin: 0; }
+        li { margin-bottom: 0.4rem; color: #333; }
+
+        /* --- SKILLS & LANGUAGES (Grayscale Badges) --- */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .badge {
+            background: #f0f0f0; 
+            color: #000;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            border: 1px solid #ccc;
+            font-size: 0.95rem;
+        }
+        
+        /* אזור שפות מיוחד */
+        .lang-section {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed #ccc;
+            font-weight: 500;
+        }
+
+        /* --- MOBILE --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .container { margin-top: -2rem; }
+            .contact-info { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>דניאל כהן</h1>
+    <div class="subtitle">סטודנט למשפטים שנה ב' | מנהל תיקים משפטיים</div>
+    
+    <div class="contact-info">
+        <span>📍 בני ברק</span>
+        <span>📞 050-8695445</span>
+        <span>✉️ D0508695445@gmail.com</span>
+    </div>
+    
+    <a href="mailto:D0508695445@gmail.com" class="contact-btn">צור קשר</a>
+</header>
+
+<div class="container">
+
+    <section class="card">
+        <h2>תקציר מקצועי</h2>
+        <p>
+            סטודנט למשפטים שנה ב’ בעל ניסיון מעשי בעבודה משפטית במשרד עורכי דין, כולל טיפול בחוזים, צוואות וניהול תיקים. בעל אחריות גבוהה, יכולת עבודה עצמאית, כישורי תקשורת מצוינים ועמידה בלחץ. מחפש להשתלב בסביבה משפטית מקצועית לצבירת ניסיון והעמקה מעשית בתחום.
+        </p>
+    </section>
+
+    <section>
+        <h2>מיומנויות ושפות</h2>
+        <div class="card">
+            <div class="skills-grid">
+                <span class="badge">אחריות וחריצות</span>
+                <span class="badge">כושר שכנוע</span>
+                <span class="badge">יכולת ביטוי מצוינת</span>
+                <span class="badge">ניהול זמן וארגון</span>
+                <span class="badge">עבודה תחת לחץ</span>
+                <span class="badge">יחסי אנוש וכריזמה</span>
+            </div>
+            <div class="lang-section">
+                <strong>שפות:</strong> עברית (שפת אם) | אנגלית (רמה גבוהה)
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>ניסיון תעסוקתי</h2>
+        
+        <div class="card" style="border-left: 5px solid #000;">
+            <h3>מנהל תיקים</h3>
+            <span class="card-sub">משרד עורכי דין</span>
+            <span class="card-date">2025 - הווה</span>
+            <ul>
+                <li>ניהול תיקים משפטיים שוטפים ועבודה מול לקוחות (פגישות ותיאום הליכים).</li>
+                <li>טיפול במסמכים משפטיים, לרבות ניסוח ועריכת חוזים וצוואות.</li>
+                <li>עבודה תחת ייפוי כוח וביצוע פעולות משפטיות בשם המשרד.</li>
+                <li>סיוע לעורכי הדין בניהול שוטף של התיקים.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>עוזר בטיחות</h3>
+            <span class="card-date">2023 - 2024</span>
+            <ul>
+                <li>פיקוח על בטיחות העובדים בשטח ואחריות על יישום נהלי בטיחות.</li>
+                <li>עבודה מול גורמים מקצועיים וניהול עובדים.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>מנהל חנות נעליים</h3>
+            <span class="card-date">2024 - 2025</span>
+            <ul>
+                <li>ניהול צוות עובדים, אחריות על מכירות, הזמנות וספקים.</li>
+                <li>עמידה ביעדי מכירה ושיפור חוויית לקוח.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>השכלה</h2>
+        <div class="card">
+            <h3>LL.B במשפטים</h3>
+            <span class="card-sub">הקריה האקדמית אונו</span>
+            <span class="card-date">2024 - 2027 (שנה ב')</span>
+        </div>
+        
+        <div class="card">
+            <h3>תעודות והשכלה נוספת</h3>
+            <ul>
+                <li><strong>בגרות מלאה:</strong> הישיבה התיכונית נהורא</li>
+                <li><strong>הסמכה:</strong> תעודת עוזר בטיחות</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
